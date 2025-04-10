@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'mydatabase',         # Matches POSTGRES_DB
         'USER': 'myuser',             # Matches POSTGRES_USER
         'PASSWORD': 'mypassword',     # Matches POSTGRES_PASSWORD
-        'HOST': 'task_manager',       # Matches your service/container name
+        'HOST': 'localhost',       # Matches your service/container name
         'PORT': '5432',               # Default PostgreSQL port
     }
 }
