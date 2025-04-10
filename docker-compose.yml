@@ -1,0 +1,19 @@
+services:
+  task_manager:
+    image: postgres:17.4-alpine3.21
+    container_name: task_manager_db
+    restart: no
+    # restart: always
+    # restart: unless-stopped
+    # restart: on-failure:3  # Retries up to 3 times on failure
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:  # Volume for the Django blog database
